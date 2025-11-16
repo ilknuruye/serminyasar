@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yazar Şermin Yaşar</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter --><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome (Sosyal Medya İkonları İçin) --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -20,26 +19,31 @@
             color: #f59e0b; /* amber-500 */
             font-weight: 600;
         }
+        /* Galeri için basit geçiş efekti */
+        .gallery-item {
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .gallery-item.active {
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <div class="container mx-auto p-4 md:p-8 max-w-5xl">
 
-        <!-- BAŞLIK VE GİRİŞ BÖLÜMÜ -->
-        <header class="text-center mb-8 md:mb-12">
-            <img src="https://placehold.co/150x150/FACC15/333333?text=ŞY" 
-                 alt="Şermin Yaşar Portresi" 
-                 class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto shadow-xl border-4 border-white mb-6">
+        <!-- BAŞLIK VE GİRİŞ BÖLÜMÜ --><header class="text-center mb-8 md:mb-12">
+            <img src="https://i.ibb.co/L5k6Y6K/sermin-yasar.jpg"
+                 alt="Şermin Yaşar Portresi"
+                 class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto shadow-xl border-4 border-white mb-6 object-cover">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Şermin Yaşar</h1>
             <p class="text-xl md:text-2xl text-amber-600 mt-2">Yazar, Oyuncu Anne, Kelime Müzesi Kurucusu</p>
         </header>
 
-        <!-- AKILLI SEKME YAPISI -->
-        <main class="bg-white rounded-xl shadow-lg overflow-hidden">
-            
-            <!-- Sekme Başlıkları -->
-            <nav class="flex border-b border-gray-200">
+        <!-- AKILLI SEKME YAPISI --><main class="bg-white rounded-xl shadow-lg overflow-hidden">
+
+            <!-- Sekme Başlıkları --><nav class="flex border-b border-gray-200">
                 <button data-tab="hakkinda" class="tab-button tab-active flex-1 py-4 px-2 text-center text-sm md:text-base transition-colors duration-300 border-b-4 border-transparent hover:bg-gray-50">
                     Hakkında
                 </button>
@@ -54,89 +58,128 @@
                 </button>
             </nav>
 
-            <!-- Sekme İçerikleri -->
-            <div class="p-6 md:p-10">
-                
-                <!-- Hakkında Sekmesi -->
-                <div id="hakkinda" class="tab-content space-y-4 leading-relaxed">
+            <!-- Sekme İçerikleri --><div class="p-6 md:p-10">
+
+                <!-- Hakkında Sekmesi --><div id="hakkinda" class="tab-content space-y-4 leading-relaxed">
                     <h2 class="text-2xl font-semibold text-amber-700 mb-4">Kelimelerin Peşinde Bir Hayat</h2>
                     <p>Şermin Yaşar, Türk edebiyatının son yıllardaki en üretken ve sevilen yazarlarından biridir. Hem çocuklar hem de yetişkinler için kaleme aldığı kitaplarıyla çok geniş bir okur kitlesine ulaşmıştır.</p>
                     <p>Yazarlık kariyerine, çocuklarıyla yaratıcı ve eğlenceli vakit geçirmenin yollarını paylaştığı "Oyuncu Anne" kimliğiyle başlamıştır. Sosyal medyada ve blogunda paylaştığı ev yapımı oyun önerileriyle binlerce ebeveyne ilham kaynağı olmuştur.</p>
                     <p>Eserlerinde genellikle samimi, mizahi ve hayatın içinden bir dil kullanır. Çocukluk anıları, aile ilişkileri, toplumsal gözlemler ve Türkçe'nin zenginlikleri sıkça işlediği temalardır. Okurlarıyla kurduğu güçlü bağ, onun içten anlatımından ve herkesin kendinden bir parça bulabildiği hikayelerinden kaynaklanır.</p>
                 </div>
 
-                <!-- Eserleri Sekmesi -->
-                <div id="eserleri" class="tab-content hidden space-y-6">
+                <!-- Eserleri Sekmesi --><div id="eserleri" class="tab-content hidden space-y-6">
                     <div>
                         <h3 class="text-xl font-semibold text-amber-700 mb-4">Yetişkinler İçin Kitapları</h3>
                         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                            <!-- Örnek Kitap Kartları -->
-                            <div class="text-center">
-                                <img src="https://placehold.co/150x220/FDE68A/333?text=Tarihi+Hoşça+Kal+Lokantası" alt="Tarihi Hoşça Kal Lokantası" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                            <!-- Yetişkin Kitap Kartları --><div class="text-center">
+                                <img src="https://i.ibb.co/tBSxX0J/tarihi-hosca-kal-lokantasi.jpg" alt="Tarihi Hoşça Kal Lokantası" class="rounded-lg shadow-md mx-auto mb-2 w-full object-cover h-auto">
                                 <span class="text-sm font-medium">Tarihi Hoşça Kal Lokantası</span>
                             </div>
                             <div class="text-center">
-                                <img src="https://placehold.co/150x220/FDE68A/333?text=Göçüp+Gidenler+Koleksiyoncusu" alt="Göçüp Gidenler Koleksiyoncusu" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <img src="https://i.ibb.co/y4L74vQ/gocup-gidenler-koleksiyoncusu.jpg" alt="Göçüp Gidenler Koleksiyoncusu" class="rounded-lg shadow-md mx-auto mb-2 w-full object-cover h-auto">
                                 <span class="text-sm font-medium">Göçüp Gidenler Koleksiyoncusu</span>
                             </div>
                             <div class="text-center">
-                                <img src="https://placehold.co/150x220/FDE68A/333?text=Deli+Tarla" alt="Deli Tarla" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <img src="https://i.ibb.co/pP0y68p/deli-tarla.jpg" alt="Deli Tarla" class="rounded-lg shadow-md mx-auto mb-2 w-full object-cover h-auto">
                                 <span class="text-sm font-medium">Deli Tarla</span>
                             </div>
                             <div class="text-center">
-                                <img src="https://placehold.co/150x220/FDE68A/333?text=Ev+Yapımı+Sihirli+Değnek" alt="Ev Yapımı Sihirli Değnek" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <img src="https://i.ibb.co/zXp2y27/ev-yapimi-sihirli-degnek.jpg" alt="Ev Yapımı Sihirli Değnek" class="rounded-lg shadow-md mx-auto mb-2 w-full object-cover h-auto">
                                 <span class="text-sm font-medium">Ev Yapımı Sihirli Değnek</span>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div>
                         <h3 class="text-xl font-semibold text-amber-700 mt-8 mb-4">Çocuklar İçin Kitapları</h3>
                         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                            <!-- Örnek Kitap Kartları -->
-                            <div class="text-center">
-                                <img src="https://placehold.co/150x220/FCD34D/333?text=Dedemin+Bakkalı" alt="Dedemin Bakkalı" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                            <!-- Çocuk Kitap Kartları --><div class="text-center">
+                                <img src="https://i.ibb.co/pLg4b4p/dedemin-bakkali.jpg" alt="Dedemin Bakkalı" class="rounded-lg shadow-md mx-auto mb-2 w-full object-cover h-auto">
                                 <span class="text-sm font-medium">Dedemin Bakkalı (Serisi)</span>
                             </div>
                             <div class="text-center">
-                                <img src="https://placehold.co/150x220/FCD34D/333?text=Cingo" alt="Cingo" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <img src="https://i.ibb.co/3s6sL17/cingo.jpg" alt="Cingo" class="rounded-lg shadow-md mx-auto mb-2 w-full object-cover h-auto">
                                 <span class="text-sm font-medium">Cingo</span>
                             </div>
                             <div class="text-center">
-                                <img src="https://placehold.co/150x220/FCD34D/333?text=Çok+Hayal+Kuran+Çocuk" alt="Çok Hayal Kuran Çocuk" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <img src="https://i.ibb.co/w76p5kX/cok-hayal-kuran-cocuk.jpg" alt="Çok Hayal Kuran Çocuk" class="rounded-lg shadow-md mx-auto mb-2 w-full object-cover h-auto">
                                 <span class="text-sm font-medium">Çok Hayal Kuran Çocuk</span>
                             </div>
                             <div class="text-center">
-                                <img src="https://placehold.co/150x220/FCD34D/333?text=Tilki+Masalları" alt="Tilki Masalları" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <img src="https://i.ibb.co/PMPmYpM/tilki-masallari.jpg" alt="Tilki Masalları" class="rounded-lg shadow-md mx-auto mb-2 w-full object-cover h-auto">
                                 <span class="text-sm font-medium">Tilki Masalları (Serisi)</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Kelime Müzesi Sekmesi -->
-                <div id="muze" class="tab-content hidden space-y-4">
+                <!-- Kelime Müzesi Sekmesi --><div id="muze" class="tab-content hidden space-y-4">
                     <h2 class="text-2xl font-semibold text-amber-700 mb-4">Bir Kültür Mirası: Kelime Müzesi</h2>
-                    <img src="https://placehold.co/600x300/F59E0B/FFFFFF?text=Kelime+Müzesi+Ankara" alt="Kelime Müzesi" class="rounded-lg shadow-lg w-full mb-4">
-                    <p class="leading-relaxed">Şermin Yaşar'ın Türk kültürüne ve diline en büyük armağanlarından biri, Ankara Kalesi'nde hayata geçirdiği <strong>Kelime Müzesi</strong>'dir.</p>
-                    <p class="leading-relaxed">Bu eşsiz müze, Türkçe'nin zenginliğini, güzelliklerini, unutulmaya yüz tutmuş kelimeleri ve kelimelerin ardındaki derin hikayeleri ziyaretçilere interaktif ve sanatsal bir dille anlatır. Atasözleri, deyimler ve kelime kökenleri üzerine kurulu enstalasyonlarla doludur.</p>
-                    <p class="leading-relaxed">Müze, somut olmayan kültürel mirasa sahip çıkma misyonuyla hem çocuklar hem de yetişkinler için unutulmaz bir deneyim sunar. Dilimizin bir hazine olduğunu bizlere yeniden hatırlatır.</p>
+                    <p class="leading-relaxed mb-6">Şermin Yaşar'ın Türk kültürüne ve diline en büyük armağanlarından biri, Ankara Kalesi'nde hayata geçirdiği <strong>Kelime Müzesi</strong>'dir. Bu eşsiz müze, Türkçe'nin zenginliğini, güzelliklerini, unutulmaya yüz tutmuş kelimeleri ve kelimelerin ardındaki derin hikayeleri ziyaretçilere interaktif ve sanatsal bir dille anlatır. Atasözleri, deyimler ve kelime kökenleri üzerine kurulu enstalasyonlarla doludur. Müze, somut olmayan kültürel mirasa sahip çıkma misyonuyla hem çocuklar hem de yetişkinler için unutulmaz bir deneyim sunar. Dilimizin bir hazine olduğunu bizlere yeniden hatırlatır.</p>
+
+                    <div class="relative w-full max-w-xl mx-auto mb-4 bg-gray-100 rounded-lg shadow-lg">
+                        <div class="overflow-hidden rounded-lg">
+                            <img src="https://i.ibb.co/wJmF02x/kelime-muzesi.jpg" alt="Kelime Müzesi Giriş" class="gallery-item active w-full object-cover h-64 md:h-80">
+                            <img src="https://i.ibb.co/0J1J1Xq/kelime-muzesi-ici1.jpg" alt="Kelime Müzesi İç Görünüm 1" class="gallery-item w-full object-cover h-64 md:h-80">
+                            <img src="https://i.ibb.co/SKgY10q/kelime-muzesi-ici2.jpg" alt="Kelime Müzesi İç Görünüm 2" class="gallery-item w-full object-cover h-64 md:h-80">
+                        </div>
+                        <button class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition" onclick="navigateGallery('muze', -1)">
+                            <i class="fas fa-chevron-left text-gray-700"></i>
+                        </button>
+                        <button class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition" onclick="navigateGallery('muze', 1)">
+                            <i class="fas fa-chevron-right text-gray-700"></i>
+                        </button>
+                        <div class="flex justify-center p-2 space-x-2">
+                            <span class="dot bg-gray-400 w-2 h-2 rounded-full cursor-pointer hover:bg-gray-600 transition" onclick="currentGallerySlide('muze', 0)"></span>
+                            <span class="dot bg-gray-400 w-2 h-2 rounded-full cursor-pointer hover:bg-gray-600 transition" onclick="currentGallerySlide('muze', 1)"></span>
+                            <span class="dot bg-gray-400 w-2 h-2 rounded-full cursor-pointer hover:bg-gray-600 transition" onclick="currentGallerySlide('muze', 2)"></span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Oyuncu Anne Sekmesi -->
-                <div id="oyuncu-anne" class="tab-content hidden space-y-4">
+                <!-- Oyuncu Anne Sekmesi --><div id="oyuncu-anne" class="tab-content hidden space-y-4">
                     <h2 class="text-2xl font-semibold text-amber-700 mb-4">"Oyuncu Anne" Felsefesi</h2>
-                    <img src="https://placehold.co/600x300/FDE68A/333?text=Yaratıcı+Oyunlar" alt="Oyuncu Anne" class="rounded-lg shadow-lg w-full mb-4">
-                    <p class="leading-relaxed">Şermin Yaşar, yazarlık kimliğinden önce "Oyuncu Anne" olarak tanındı. Bu felsefe, çocuklarla pahalı ve karmaşık oyuncaklar yerine, evdeki basit malzemelerle (karton kutular, kumaş parçaları, makarnalar) yaratıcı oyunlar kurmayı temel alır.</p>
-                    <p class="leading-relaxed">"Oyuncu Anne" yaklaşımı, ebeveyn ile çocuk arasında güçlü bir bağ kurmanın, çocuğun hayal gücünü geliştirmenin ve en önemlisi birlikte "gerçek" ve kaliteli zaman geçirmenin altını çizer.</p>
-                    <p class="leading-relaxed">Yazarın bu konudaki kitapları ve paylaşımları, modern çağın yoğun ebeveynlerine, çocuklarıyla basit ama etkili bir şekilde bağ kurmaları için pratik ve değerli bir rehber olmuştur.</p>
+                    <p class="leading-relaxed mb-6">Şermin Yaşar, yazarlık kimliğinden önce "Oyuncu Anne" olarak tanındı. Bu felsefe, çocuklarla pahalı ve karmaşık oyuncaklar yerine, evdeki basit malzemelerle (karton kutular, kumaş parçaları, makarnalar) yaratıcı oyunlar kurmayı temel alır. "Oyuncu Anne" yaklaşımı, ebeveyn ile çocuk arasında güçlü bir bağ kurmanın, çocuğun hayal gücünü geliştirmenin ve en önemlisi birlikte "gerçek" ve kaliteli zaman geçirmenin altını çizer. Yazarın bu konudaki kitapları ve paylaşımları, modern çağın yoğun ebeveynlerine, çocuklarıyla basit ama etkili bir şekilde bağ kurmaları için pratik ve değerli bir rehber olmuştur.</p>
+
+                    <div class="relative w-full max-w-xl mx-auto mb-4 bg-gray-100 rounded-lg shadow-lg">
+                        <div class="overflow-hidden rounded-lg">
+                            <img src="https://i.ibb.co/Jqj843K/oyuncu-anne.jpg" alt="Oyuncu Anne Etkinlik 1" class="gallery-item active w-full object-cover h-64 md:h-80">
+                            <img src="https://i.ibb.co/r0H31L5/oyuncu-anne-2.jpg" alt="Oyuncu Anne Etkinlik 2" class="gallery-item w-full object-cover h-64 md:h-80">
+                            <img src="https://i.ibb.co/xJ51D2L/oyuncu-anne-3.jpg" alt="Oyuncu Anne Etkinlik 3" class="gallery-item w-full object-cover h-64 md:h-80">
+                        </div>
+                        <button class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition" onclick="navigateGallery('oyuncu-anne', -1)">
+                            <i class="fas fa-chevron-left text-gray-700"></i>
+                        </button>
+                        <button class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition" onclick="navigateGallery('oyuncu-anne', 1)">
+                            <i class="fas fa-chevron-right text-gray-700"></i>
+                        </button>
+                        <div class="flex justify-center p-2 space-x-2">
+                            <span class="dot bg-gray-400 w-2 h-2 rounded-full cursor-pointer hover:bg-gray-600 transition" onclick="currentGallerySlide('oyuncu-anne', 0)"></span>
+                            <span class="dot bg-gray-400 w-2 h-2 rounded-full cursor-pointer hover:bg-gray-600 transition" onclick="currentGallerySlide('oyuncu-anne', 1)"></span>
+                            <span class="dot bg-gray-400 w-2 h-2 rounded-full cursor-pointer hover:bg-gray-600 transition" onclick="currentGallerySlide('oyuncu-anne', 2)"></span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </main>
 
-        <!-- FOOTER -->
-        <footer class="text-center mt-12 text-gray-500 text-sm">
+        <!-- SOSYAL MEDYA BAĞLANTILARI --><div class="text-center mt-12 mb-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Şermin Yaşar'ı Takip Edin</h3>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.instagram.com/serminyasar/" target="_blank" class="text-gray-500 hover:text-pink-600 transition-colors duration-300 text-3xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/serminyasarozt" target="_blank" class="text-gray-500 hover:text-blue-500 transition-colors duration-300 text-3xl">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/serminyasar/" target="_blank" class="text-gray-500 hover:text-blue-700 transition-colors duration-300 text-3xl">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <!-- Diğer sosyal medya bağlantıları eklenebilir --></div>
+        </div>
+
+        <!-- FOOTER --><footer class="text-center mt-12 text-gray-500 text-sm">
             <p>&copy; 2025 Bu sayfa, Şermin Yaşar'ı tanıtım amacıyla hazırlanmıştır.</p>
             <p>Tüm eser hakları yazarın kendisine ve yayınevlerine aittir.</p>
         </footer>
@@ -144,7 +187,7 @@
     </div>
 
     <script>
-        // "Akıllı" sekme sistemi için basit JavaScript
+        // "Akıllı" sekme sistemi için JavaScript
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
 
@@ -171,8 +214,57 @@
                 const activeContent = document.getElementById(tabId);
                 if (activeContent) {
                     activeContent.classList.remove('hidden');
+                    // Galeri içeren sekmeler açıldığında ilk resmi aktif yap
+                    if (tabId === 'muze' || tabId === 'oyuncu-anne') {
+                        showGallerySlide(tabId, 0);
+                    }
                 }
             });
+        });
+
+        // Galeri sistemi için JavaScript
+        const galleries = {
+            'muze': {
+                slideIndex: 0,
+                items: document.querySelectorAll('#muze .gallery-item'),
+                dots: document.querySelectorAll('#muze .dot')
+            },
+            'oyuncu-anne': {
+                slideIndex: 0,
+                items: document.querySelectorAll('#oyuncu-anne .gallery-item'),
+                dots: document.querySelectorAll('#oyuncu-anne .dot')
+            }
+        };
+
+        function showGallerySlide(galleryId, n) {
+            let gallery = galleries[galleryId];
+            if (!gallery) return;
+
+            // Önceki aktif öğeyi kaldır
+            gallery.items.forEach(item => item.classList.remove('active'));
+            gallery.dots.forEach(dot => dot.classList.remove('bg-amber-500')); // Aktif nokta rengi
+
+            // Yeni indeks hesaplaması
+            gallery.slideIndex = (n + gallery.items.length) % gallery.items.length;
+
+            // Yeni aktif öğeyi göster
+            gallery.items[gallery.slideIndex].classList.add('active');
+            gallery.dots[gallery.slideIndex].classList.add('bg-amber-500'); // Aktif nokta rengi
+        }
+
+        function navigateGallery(galleryId, n) {
+            let gallery = galleries[galleryId];
+            showGallerySlide(galleryId, gallery.slideIndex + n);
+        }
+
+        function currentGallerySlide(galleryId, n) {
+            showGallerySlide(galleryId, n);
+        }
+
+        // Sayfa yüklendiğinde Kelime Müzesi ve Oyuncu Anne galerilerini başlat
+        document.addEventListener('DOMContentLoaded', () => {
+            showGallerySlide('muze', 0);
+            showGallerySlide('oyuncu-anne', 0);
         });
     </script>
 
