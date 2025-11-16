@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazar Şermin Yaşar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Aktif sekme için özel stil */
+        .tab-active {
+            border-bottom-color: #f59e0b; /* amber-500 */
+            color: #f59e0b; /* amber-500 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <!-- BAŞLIK VE GİRİŞ BÖLÜMÜ -->
+        <header class="text-center mb-8 md:mb-12">
+            <img src="https://placehold.co/150x150/FACC15/333333?text=ŞY" 
+                 alt="Şermin Yaşar Portresi" 
+                 class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto shadow-xl border-4 border-white mb-6">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Şermin Yaşar</h1>
+            <p class="text-xl md:text-2xl text-amber-600 mt-2">Yazar, Oyuncu Anne, Kelime Müzesi Kurucusu</p>
+        </header>
+
+        <!-- AKILLI SEKME YAPISI -->
+        <main class="bg-white rounded-xl shadow-lg overflow-hidden">
+            
+            <!-- Sekme Başlıkları -->
+            <nav class="flex border-b border-gray-200">
+                <button data-tab="hakkinda" class="tab-button tab-active flex-1 py-4 px-2 text-center text-sm md:text-base transition-colors duration-300 border-b-4 border-transparent hover:bg-gray-50">
+                    Hakkında
+                </button>
+                <button data-tab="eserleri" class="tab-button flex-1 py-4 px-2 text-center text-sm md:text-base text-gray-600 transition-colors duration-300 border-b-4 border-transparent hover:bg-gray-50">
+                    Başlıca Eserleri
+                </button>
+                <button data-tab="muze" class="tab-button flex-1 py-4 px-2 text-center text-sm md:text-base text-gray-600 transition-colors duration-300 border-b-4 border-transparent hover:bg-gray-50">
+                    Kelime Müzesi
+                </button>
+                <button data-tab="oyuncu-anne" class="tab-button flex-1 py-4 px-2 text-center text-sm md:text-base text-gray-600 transition-colors duration-300 border-b-4 border-transparent hover:bg-gray-50">
+                    Oyuncu Anne
+                </button>
+            </nav>
+
+            <!-- Sekme İçerikleri -->
+            <div class="p-6 md:p-10">
+                
+                <!-- Hakkında Sekmesi -->
+                <div id="hakkinda" class="tab-content space-y-4 leading-relaxed">
+                    <h2 class="text-2xl font-semibold text-amber-700 mb-4">Kelimelerin Peşinde Bir Hayat</h2>
+                    <p>Şermin Yaşar, Türk edebiyatının son yıllardaki en üretken ve sevilen yazarlarından biridir. Hem çocuklar hem de yetişkinler için kaleme aldığı kitaplarıyla çok geniş bir okur kitlesine ulaşmıştır.</p>
+                    <p>Yazarlık kariyerine, çocuklarıyla yaratıcı ve eğlenceli vakit geçirmenin yollarını paylaştığı "Oyuncu Anne" kimliğiyle başlamıştır. Sosyal medyada ve blogunda paylaştığı ev yapımı oyun önerileriyle binlerce ebeveyne ilham kaynağı olmuştur.</p>
+                    <p>Eserlerinde genellikle samimi, mizahi ve hayatın içinden bir dil kullanır. Çocukluk anıları, aile ilişkileri, toplumsal gözlemler ve Türkçe'nin zenginlikleri sıkça işlediği temalardır. Okurlarıyla kurduğu güçlü bağ, onun içten anlatımından ve herkesin kendinden bir parça bulabildiği hikayelerinden kaynaklanır.</p>
+                </div>
+
+                <!-- Eserleri Sekmesi -->
+                <div id="eserleri" class="tab-content hidden space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-amber-700 mb-4">Yetişkinler İçin Kitapları</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                            <!-- Örnek Kitap Kartları -->
+                            <div class="text-center">
+                                <img src="https://placehold.co/150x220/FDE68A/333?text=Tarihi+Hoşça+Kal+Lokantası" alt="Tarihi Hoşça Kal Lokantası" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <span class="text-sm font-medium">Tarihi Hoşça Kal Lokantası</span>
+                            </div>
+                            <div class="text-center">
+                                <img src="https://placehold.co/150x220/FDE68A/333?text=Göçüp+Gidenler+Koleksiyoncusu" alt="Göçüp Gidenler Koleksiyoncusu" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <span class="text-sm font-medium">Göçüp Gidenler Koleksiyoncusu</span>
+                            </div>
+                            <div class="text-center">
+                                <img src="https://placehold.co/150x220/FDE68A/333?text=Deli+Tarla" alt="Deli Tarla" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <span class="text-sm font-medium">Deli Tarla</span>
+                            </div>
+                            <div class="text-center">
+                                <img src="https://placehold.co/150x220/FDE68A/333?text=Ev+Yapımı+Sihirli+Değnek" alt="Ev Yapımı Sihirli Değnek" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <span class="text-sm font-medium">Ev Yapımı Sihirli Değnek</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-amber-700 mt-8 mb-4">Çocuklar İçin Kitapları</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                            <!-- Örnek Kitap Kartları -->
+                            <div class="text-center">
+                                <img src="https://placehold.co/150x220/FCD34D/333?text=Dedemin+Bakkalı" alt="Dedemin Bakkalı" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <span class="text-sm font-medium">Dedemin Bakkalı (Serisi)</span>
+                            </div>
+                            <div class="text-center">
+                                <img src="https://placehold.co/150x220/FCD34D/333?text=Cingo" alt="Cingo" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <span class="text-sm font-medium">Cingo</span>
+                            </div>
+                            <div class="text-center">
+                                <img src="https://placehold.co/150x220/FCD34D/333?text=Çok+Hayal+Kuran+Çocuk" alt="Çok Hayal Kuran Çocuk" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <span class="text-sm font-medium">Çok Hayal Kuran Çocuk</span>
+                            </div>
+                            <div class="text-center">
+                                <img src="https://placehold.co/150x220/FCD34D/333?text=Tilki+Masalları" alt="Tilki Masalları" class="rounded-lg shadow-md mx-auto mb-2 w-full">
+                                <span class="text-sm font-medium">Tilki Masalları (Serisi)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kelime Müzesi Sekmesi -->
+                <div id="muze" class="tab-content hidden space-y-4">
+                    <h2 class="text-2xl font-semibold text-amber-700 mb-4">Bir Kültür Mirası: Kelime Müzesi</h2>
+                    <img src="https://placehold.co/600x300/F59E0B/FFFFFF?text=Kelime+Müzesi+Ankara" alt="Kelime Müzesi" class="rounded-lg shadow-lg w-full mb-4">
+                    <p class="leading-relaxed">Şermin Yaşar'ın Türk kültürüne ve diline en büyük armağanlarından biri, Ankara Kalesi'nde hayata geçirdiği <strong>Kelime Müzesi</strong>'dir.</p>
+                    <p class="leading-relaxed">Bu eşsiz müze, Türkçe'nin zenginliğini, güzelliklerini, unutulmaya yüz tutmuş kelimeleri ve kelimelerin ardındaki derin hikayeleri ziyaretçilere interaktif ve sanatsal bir dille anlatır. Atasözleri, deyimler ve kelime kökenleri üzerine kurulu enstalasyonlarla doludur.</p>
+                    <p class="leading-relaxed">Müze, somut olmayan kültürel mirasa sahip çıkma misyonuyla hem çocuklar hem de yetişkinler için unutulmaz bir deneyim sunar. Dilimizin bir hazine olduğunu bizlere yeniden hatırlatır.</p>
+                </div>
+
+                <!-- Oyuncu Anne Sekmesi -->
+                <div id="oyuncu-anne" class="tab-content hidden space-y-4">
+                    <h2 class="text-2xl font-semibold text-amber-700 mb-4">"Oyuncu Anne" Felsefesi</h2>
+                    <img src="https://placehold.co/600x300/FDE68A/333?text=Yaratıcı+Oyunlar" alt="Oyuncu Anne" class="rounded-lg shadow-lg w-full mb-4">
+                    <p class="leading-relaxed">Şermin Yaşar, yazarlık kimliğinden önce "Oyuncu Anne" olarak tanındı. Bu felsefe, çocuklarla pahalı ve karmaşık oyuncaklar yerine, evdeki basit malzemelerle (karton kutular, kumaş parçaları, makarnalar) yaratıcı oyunlar kurmayı temel alır.</p>
+                    <p class="leading-relaxed">"Oyuncu Anne" yaklaşımı, ebeveyn ile çocuk arasında güçlü bir bağ kurmanın, çocuğun hayal gücünü geliştirmenin ve en önemlisi birlikte "gerçek" ve kaliteli zaman geçirmenin altını çizer.</p>
+                    <p class="leading-relaxed">Yazarın bu konudaki kitapları ve paylaşımları, modern çağın yoğun ebeveynlerine, çocuklarıyla basit ama etkili bir şekilde bağ kurmaları için pratik ve değerli bir rehber olmuştur.</p>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="text-center mt-12 text-gray-500 text-sm">
+            <p>&copy; 2025 Bu sayfa, Şermin Yaşar'ı tanıtım amacıyla hazırlanmıştır.</p>
+            <p>Tüm eser hakları yazarın kendisine ve yayınevlerine aittir.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // "Akıllı" sekme sistemi için basit JavaScript
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.dataset.tab;
+
+                // Tüm butonlardan aktif stili kaldır
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('tab-active');
+                    btn.classList.add('text-gray-600');
+                });
+
+                // Tıklanan butona aktif stili ekle
+                button.classList.add('tab-active');
+                button.classList.remove('text-gray-600');
+
+                // Tüm içerikleri gizle
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+
+                // İlgili içeriği göster
+                const activeContent = document.getElementById(tabId);
+                if (activeContent) {
+                    activeContent.classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
